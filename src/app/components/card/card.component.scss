@@ -1,0 +1,36 @@
+#card-content {
+
+}
+
+.cardContainer {
+  width: 200px;
+  height: 300px;
+  flex-basis: 25%; /* Cơ bản: 23%, để vừa 4 thẻ trong 1 hàng với khoảng cách */
+  background-color: #fff;
+  border: 2px solid #ddd;
+  //gap: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.cardContainer:hover {
+  transform: scale(1.055);
+}
+
+.cardName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: center;
+}

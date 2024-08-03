@@ -1,0 +1,20 @@
+<div id="navbar">
+  <app-nav></app-nav>
+</div>
+
+
+<div id="card-content">
+  @for (prod of this.cartService.products; track $index) {
+    <div id="card-showup">
+      <app-card
+        [id]="prod.id"
+        [name]="prod.name"
+        [price]="prod.price"
+        [inStock]="prod.inStock">
+      </app-card>
+    </div>
+
+  };
+
+</div>
+

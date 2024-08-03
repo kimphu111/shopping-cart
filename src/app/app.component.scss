@@ -1,0 +1,12 @@
+.card-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Khoảng cách giữa các thẻ card */
+  flex-direction: column;
+
+  .example-card {
+    flex: 1 1 calc(25% - 16px); /* Mỗi thẻ card chiếm khoảng 25% chiều rộng của container */
+    max-width: calc(25% - 16px);
+    box-sizing: border-box;
+  }
+}
