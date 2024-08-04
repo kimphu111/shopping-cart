@@ -15,66 +15,73 @@ export class CartService {
   }[] = [
     {
       id: 1,
-      name: 'Áo khoác',
-      img: '../assets/1.jpg',
+      name: 'Áo polo đơn giản',
+      img: 'assets/pictrue/1.jpg',
       price: 100,
       inStock: 10,
     },
     {
       id: 2,
-      name: 'Áo sơ mi',
-      img: '../assets/1.jpg',
-
+      name: 'Áo polo nam xanh',
+      img: 'assets/pictrue/2.jpg',
       price: 200,
       inStock: 20,
     },
     {
       id: 3,
-      name: 'Áo thun',
-      img: '../assets/1.jpg',
-
+      name: 'Áo polo nam sọc kẻ đen',
+      img: 'assets/pictrue/3.jpg',
       price: 300,
       inStock: 30,
     },
     {
       id: 4,
-      name: 'Áo len',
-      img: '../assets/1.jpg',
-
+      name: 'Áo thun ',
+      img: 'assets/pictrue/4.jpg',
       price: 400,
       inStock: 40,
     },
     {
       id: 5,
-      name: 'Quần jean',
-      img: '../assets/1.jpg',
-
+      name: 'Quần ngắn ',
+      img: 'assets/pictrue/quanDui.jpg',
       price: 400,
       inStock: 40,
     },
     {
       id: 6,
-      name: 'Quần kaki',
-      img: '../assets/1.jpg',
-
+      name: 'Quần ngắn nữ',
+      img: 'assets/pictrue/quanHelloKitty.jpg',
       price: 400,
       inStock: 40,
     },
     {
       id: 7,
-      name: 'Quần tây',
-      img: '../assets/1.jpg',
-
-      price: 400,
-      inStock: 40,
+      name: 'Quần jean nam/nữ',
+      img: 'assets/pictrue/quanJean.jpg',
+      price: 299.0,
+      inStock: 80,
     },
     {
       id: 8,
-      name: 'Quần thun',
-      img: '../assets/1.jpg',
-
-      price: 400,
-      inStock: 40,
+      name: 'Váy nữ',
+      img: 'assets/pictrue/vayNgan.jpg',
+      price: 159.0,
+      inStock: 11,
+    },
+    {
+      id: 9,
+      name: 'Quần dải vải',
+      img: 'assets/pictrue/9.jpg',
+      price: 159.0,
+      inStock: 11,
+    },
+    {
+      id: 10,
+      name: 'Quần nữ dài',
+      img: 'assets/pictrue/10.jpg',
+      price: 159.0,
+      inStock: 11,
     },
   ];
 

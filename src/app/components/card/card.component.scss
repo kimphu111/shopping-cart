@@ -1,36 +1,46 @@
-#card-content {
-
-}
-
-.cardContainer {
-  width: 200px;
-  height: 300px;
-  flex-basis: 25%; /* Cơ bản: 23%, để vừa 4 thẻ trong 1 hàng với khoảng cách */
-  background-color: #fff;
-  border: 2px solid #ddd;
-  //gap: 20px;
+//css cho tôi 1 hàng sẽ có 4 products
+#products {
+  //display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 2rem;
+  border: 5px solid #ccc;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  transition: transform 0.3s ease;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+  height: fit-content;
+  width: fit-content;
+  //display: flex;
+  justify-content: center;
 }
 
-.cardContainer:hover {
-  transform: scale(1.055);
-}
 
 .cardName {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #333;
+  margin: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  flex-basis: 25%;
 }
 
 .card-info {
-  display: flex;
-  justify-content: space-between;
+  width: fit-content;
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 5px;
+  padding-right: 15px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
 }
 
-.card-actions {
-  display: flex;
+.card-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: #3d014b;
+}
+
+
+.cardName img {
   justify-content: center;
+  align-items: center;
+  width: fit-content;
 }

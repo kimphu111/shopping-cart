@@ -1,12 +1,68 @@
-.card-info {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Jost", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  //max-width: 100%;
+  //height: auto;
+}
+
+#card-content {
+  max-width: 100%;
+  margin-top: 20px;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px; /* Khoảng cách giữa các thẻ card */
-  flex-direction: column;
+  justify-content: space-between;
+}
 
-  .example-card {
-    flex: 1 1 calc(25% - 16px); /* Mỗi thẻ card chiếm khoảng 25% chiều rộng của container */
-    max-width: calc(25% - 16px);
-    box-sizing: border-box;
-  }
+
+/* app.component.scss */
+
+#products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // 4 sản phẩm mỗi hàng
+  gap: 1rem;
+  margin: 1rem 30px; // Margin cho cả hai phía trên và dưới, và bên trái
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  height: auto;
+}
+
+.card-info {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Đổ bóng nhẹ cho hiệu ứng nổi lên
+  transition: transform 0.3s ease, box-shadow 0.3s ease; // Thêm hiệu ứng chuyển động
+}
+
+.card-info:hover {
+  transform: translateY(-5px); // Nổi lên 5px khi di chuột qua
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); // Đổ bóng mạnh hơn khi di chuột qua
+}
+
+.cardName {
+  margin: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%; // Đảm bảo cardName chiếm toàn bộ chiều rộng của card-info
+}
+
+#cart-content {
+  margin: 20px;
+}
+
+#cart-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+#cart-content li {
+  margin-bottom: 10px;
 }
