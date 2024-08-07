@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
-import { CartService } from '../../services/cart.service';
+import { AuthService } from '../../services/auth.service';
+import { NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
-  standalone: true,
+  imports: [NgIf, RouterLink],
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
+  standalone: true,
 })
 export class NavComponent {
-  constructor(public cartService: CartService) {}
+  storService: any;
+
+  constructor(public authService: AuthService) {}
 }

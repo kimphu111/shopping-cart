@@ -1,0 +1,43 @@
+<div class="top">
+  <h2> Thông tin sản phẩm </h2>
+</div>
+
+<div class="product-detail">
+
+
+  <section class="product-image">
+    <img [src]="detailProduct.img" alt="{{ detailProduct.name }}">
+  </section>
+
+
+  <!-- Product Info -->
+  <section class="product-info">
+
+    <header class="product-name">
+      <h1>{{ detailProduct.name }}</h1>
+    </header>
+
+    <div class="product-price">
+      <h2>{{ detailProduct.price }}</h2>
+    </div>
+
+
+    <!-- Quantity Selector -->
+    <div class="quantity-selector">
+      <label for="quantity">Số lượng:</label>
+      <button (click)="decreaseQuantity()">-</button>
+      <span id="quantity">{{ quantity }}</span>
+      <button (click)="increaseQuantity()">+</button>
+    </div>
+
+    <!-- Total Price -->
+    <div class="total-price">
+      <h2>Tổng tiền: {{ totalPrice }}.000vnđ</h2>
+      <button (click)="addToCart(detailProduct)">Thêm vào giỏ hàng</button>
+    </div>
+
+
+    <!-- Add to Cart Button -->
+
+  </section>
+</div>

@@ -1,0 +1,7 @@
+<div id="container">
+  @for (item of CartService.products; track $index) {
+    <app-card [routerLink]="['/product', item.id]"
+              [product]="item"
+    ></app-card>
+  }
+</div>

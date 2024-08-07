@@ -1,12 +1,35 @@
 <nav class="navbar">
   <div class="navbar-container">
-    <a class="navbar-brand" href="#">KingFu</a>
+    <a class="navbar-brand" [routerLink]="['/home']">KingFu</a>
 
     <ul class="navbar-menu">
-      <li class="navbar-item"><a class="navbar-link" href="#">Trang chủ</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="#">Diễn đàn</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="#">Mục lục</a></li>
+      <li class="navbar-item"><a class="navbar-link" [routerLink]="['/home']">Trang chủ</a></li>
+      <li class="navbar-item"><a class="navbar-link" [routerLink]="['/products']">Sản phẩm</a></li>
+
+      <li class="navbar-item dropdown">
+        <a class="navbar-link" href="#">Mục lục <span class="dropdown-arrow">&#9662; <!-- Mũi tên chỉ xuống -->  </span>
+        </a>
+
+        <!-- Popup Menu -->
+        <div class="popup-menu">
+          <a [routerLink]="['/products']">Áo polo nam mát mẻ</a>
+          <a [routerLink]="['/products']">Quần dài nam/nữ free size</a>
+          <a [routerLink]="['/products']">Siêu sale sập sàn</a>
+        </div>
+      </li>
+
+
+      <div *ngIf="authService.currentUser" class="user-info">
+        <img [src]="authService.currentUser.photoURL" alt="User Avatar" class="user-avatar">
+        <span>{{ authService.currentUser.displayName }}</span>
+        <button (click)="authService.logout()">Đăng Xuất</button>
+      </div>
+      <div id="login-button">
+        <button *ngIf="!authService.currentUser" (click)="authService.login()"> Đăng Nhập</button>
+      </div>
     </ul>
 
   </div>
 </nav>
+
+

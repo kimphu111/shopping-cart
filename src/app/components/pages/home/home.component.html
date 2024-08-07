@@ -1,0 +1,42 @@
+<div class="home-container">
+  <!-- Hero Section -->
+  <section class="promotions">
+    <h2>Khuyến mãi đặc biệt</h2>
+    <div class="promotion-cards">
+      <div class="promotion-card">
+        <img src="/assets/pictrue/P1.jpg" alt="Khuyến mãi 1">
+        <div class="promotion-info">
+          <h3>Giảm giá mùa hè</h3>
+          <p>Nhận ngay giảm giá lên đến 50% cho các sản phẩm mùa hè!</p>
+          <a class="btn-secondary" [routerLink]="['/products']">Xem Khuyến Mãi</a>
+        </div>
+      </div>
+      <div class="promotion-card">
+        <img src="/assets/pictrue/P2.jpg" alt="Khuyến mãi 2">
+        <div class="promotion-info">
+          <h3>Đặc biệt cho thành viên</h3>
+          <p>Tham gia chương trình thành viên để nhận ưu đãi đặc biệt.</p>
+          <a class="btn-secondary" [routerLink]="['/products']">Tìm Hiểu Thêm</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Featured Products Section -->
+  <section class="featured-products">
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let product of featuredProducts">
+        <img [src]="product.img" alt="{{ product.name }}">
+        <div class="product-info">
+          <h3>{{ product.name }}</h3>
+          <p>{{ product.description }}</p>
+          <span class="price">{{ product.price | currency }}</span>
+          <button (click)="addToCart()">Thêm vào giỏ hàng</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</div>

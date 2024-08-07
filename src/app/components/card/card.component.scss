@@ -1,46 +1,32 @@
-//css cho tôi 1 hàng sẽ có 4 products
-#products {
-  //display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 2rem;
-  border: 5px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  margin-top: 20px;
-  height: fit-content;
-  width: fit-content;
-  //display: flex;
-  justify-content: center;
+.product-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
+.product-card {
+  flex: 1 1 calc(25% - 16px);
+  box-sizing: border-box;
+  border: 4px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
+  margin-left: 36px;
 
-.cardName {
-  margin: 10px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-  flex-basis: 25%;
 }
 
 .card-info {
-  width: fit-content;
-  height: fit-content;
-  background-color: #fff;
-  border-radius: 5px;
-  padding-right: 15px;
-  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
-}
-
-.card-info:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  color: #3d014b;
-}
-
-
-.cardName img {
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  width: fit-content;
+  text-align: center;
+}
+
+.card-info img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card-info h2, .card-info h3, .card-info h4 {
+  margin: 8px 0;
 }

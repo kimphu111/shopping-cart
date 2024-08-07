@@ -1,22 +1,13 @@
-<div id="navbar">
-  <app-nav></app-nav>
+<div id="container">
+  <div id="navbar">
+    <app-nav></app-nav>
+  </div>
+
+  <!-- Phần tử này chỉ nên hiển thị trên trang Home -->
+  <div *ngIf="isHomePage" id="home-container">
+    <!-- Nội dung của home-container -->
+  </div>
+
+  <!-- Nội dung của các trang khác -->
+  <router-outlet></router-outlet>
 </div>
-
-
-<div id="card-content">
-  @for (prod of this.cartService.products; track $index) {
-    <div id="card-showup">
-      <app-card
-        [id]="prod.id"
-        [name]="prod.name"
-        [img]="prod.img"
-        [price]="prod.price"
-        [inStock]="prod.inStock">
-      </app-card>
-    </div>
-  };
-</div>
-
-
-
-

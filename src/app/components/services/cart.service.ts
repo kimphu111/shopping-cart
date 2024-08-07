@@ -1,18 +1,16 @@
 import { Injectable } from '@angular/core';
+import { AuthService } from './auth.service';
+import { ProductModel } from '../../models/product.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
-  constructor() {}
+  items: any;
 
-  products: {
-    id: number;
-    name: string;
-    img: string;
-    price: number;
-    inStock: number;
-  }[] = [
+  constructor(private authService: AuthService) {}
+
+  products: ProductModel[] = [
     {
       id: 1,
       name: 'Áo polo đơn giản',
@@ -76,13 +74,6 @@ export class CartService {
       price: 159.0,
       inStock: 11,
     },
-    {
-      id: 10,
-      name: 'Quần nữ dài',
-      img: 'assets/pictrue/10.jpg',
-      price: 159.0,
-      inStock: 11,
-    },
   ];
 
   cart: {
@@ -109,13 +100,19 @@ export class CartService {
     if (this.products[indexProduct].inStock === 0) {
       this.products.splice(indexProduct, 1);
     }
+    // check if user is logged in if user logged in then users just can add to cart
+    if (this.authService.currentUser) {
+      this.items.push(item);
+      console.log('item added to cart', item);
+    } else {
+      alert('Please login to add to cart');
+      console.log('Please login to add to cart', item);
+    }
   }
 
   removeFromCart(index: number) {
     this.cart.splice(index, 1);
   }
-}
 
-export class navComponent {
-  constructor() {}
+  removeItem(id: number) {}
 }

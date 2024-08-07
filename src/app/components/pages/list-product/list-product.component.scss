@@ -1,0 +1,11 @@
+#container {
+  //cho mõi hàng 4 card-info
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+

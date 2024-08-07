@@ -1,16 +1,16 @@
-<div id="products">
+<div class="product-card">
   <div class="card-info">
-
-    <div class="cardName">
-
-      <h1>{{ name }}</h1>
-      <img [src]="img" alt="ảnh" class="cardImage"/>
-      <h3>In Stock: {{ inStock }}</h3>
-      <h2>Price: {{ price }}</h2>
-      <div>
-        <button mat-button (click)="addToCart()">Add to Cart</button>
-      </div>
-
-    </div>
+    <h2>{{ this.product.name }}</h2>
+    <img src="{{  this.product.img }}" alt=" anh cua tam anh">
+    <h4>{{ this.product.inStock }}</h4>
+    <h3>{{ this.product.price }}</h3>
+    <button (click)="cartService.addToCart({
+      id: this.product.id,
+      name: this.product.name,
+      price: this.product.price,
+      quantity: 1
+    })">Thêm vào giỏ hàng
+    </button>
   </div>
+
 </div>
